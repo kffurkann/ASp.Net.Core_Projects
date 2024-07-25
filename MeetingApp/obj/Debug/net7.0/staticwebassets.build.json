@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "DlDvk7s/STUR+3jCGOVwkenoAG4TklIHugQg3koq60A=",
+  "Source": "MeetingApp",
+  "BasePath": "_content/MeetingApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MeetingApp\\wwwroot",
+      "Source": "MeetingApp",
+      "ContentRoot": "E:\\projects_.net\\MeetingApp\\wwwroot\\",
+      "BasePath": "_content/MeetingApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\projects_.net\\MeetingApp\\wwwroot\\css\\styles.css",
+      "SourceId": "MeetingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects_.net\\MeetingApp\\wwwroot\\",
+      "BasePath": "_content/MeetingApp",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+﻿@model Product
+
+
+<div class="container">
+    <div class="card" style="width: 30rem; margin: auto;">
+
+        <img src="/img/@Model.Image" style="width:200px; margin: auto;margin-top: 10%;" alt="">
+        <div class="card-body" style="margin: auto;">
+            <h5 class="card-title">@Model.Name </h5>
+            <h6>Price: @Model.Price</h6>
+            @{
+                if (Model.CategoryId == 1)
+                {
+                    <h6>Category: Phone</h6>
+                }
+                else if (Model.CategoryId == 2)
+                {
+                    <h6>Category: Computer</h6>
+                }
+            }
+            @{
+                if (Model.IsActive)
+                {
+                    <span class="badge bg-primary" style="margin-left: 25%;margin-top: 10px;">Active</span>
+                }
+                else
+                {
+                    <span class="badge bg-danger" style="margin-left: 25%;margin-top: 10px;">Disabled</span>
+                }
+            }
+        </div>
+        <p class="h6" style="margin: auto; margin-bottom: 20px;">Do you want to delete the product named "@Model.Name" ?</p>
+        <form action="" method="post" style="margin: auto;margin-bottom: 10%;">
+            <input type="hidden" asp-for="@Model.ProductId">
+
+            <a href="/" class="btn btn-primary">Cancel</a>
+            <button type="submit" class="btn btn-danger">Confirm</button>
+        </form>
+    </div>
+</div>
