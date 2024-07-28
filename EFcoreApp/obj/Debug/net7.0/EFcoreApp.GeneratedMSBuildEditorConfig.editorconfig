@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/projects_.net/EFcoreApp/Views/Kurs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Kurs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Kurs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Kurs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/projects_.net/EFcoreApp/Views/Ogrenci/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
