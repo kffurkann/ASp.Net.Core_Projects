@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\projects_.net\\EFcoreApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\ogrenci\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\ogrenci\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\controllers\\ogrencicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:controllers\\ogrencicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\ogrenci\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\ogrenci\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\ogrenci\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\ogrenci\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\ogrenci\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\ogrenci\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 226,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ogrenci\\Delete.cshtml",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Ogrenci\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-28T09:06:41.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ogrenci\\Create.cshtml",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Create.cshtml",
+              "RelativeToolTip": "Views\\Ogrenci\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T13:17:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ogrenci\\Edit.cshtml",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Ogrenci\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T13:10:49.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T12:37:35.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ogrenci\\Index.cshtml",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Ogrenci\\Index.cshtml",
+              "RelativeToolTip": "Views\\Ogrenci\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T12:27:17.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OgrenciController.cs",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Controllers\\OgrenciController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OgrenciController.cs",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Controllers\\OgrenciController.cs",
+              "RelativeToolTip": "Controllers\\OgrenciController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAgwGsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T11:53:21.333Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
