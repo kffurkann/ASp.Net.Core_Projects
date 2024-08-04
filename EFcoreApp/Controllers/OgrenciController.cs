@@ -39,9 +39,17 @@ namespace EFcoreApp.Controllers
                 return NotFound();
             }
 
-            var ogr = await _context.Ogrenciler.FindAsync(id);// sadece id'ye göre arama yapar
+            var ogr = await _context
+                                .Ogrenciler
+                                .Include(o => o.KursKayitlari)
+                                .ThenInclude(o => o.Kurs)
+                                .FirstOrDefaultAsync(o=>o.Ogrencild==id);
+
+            //var ogr = await _context.Ogrenciler.FindAsync(id);
+
+            // sadece id'ye göre arama yapar
             //var ogr = await _context.Ogrenciler.FirstOrDefaultAsync(o=>o.Ogrencild==id);//bulduğu ilk herhangi bir kritere göre değeri döndürür.
-                                                                                          // illa id istemez
+            // illa id istemez
             if (ogr== null)
             {
                 return NotFound();

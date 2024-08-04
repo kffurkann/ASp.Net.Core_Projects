@@ -1,5 +1,7 @@
 ﻿using EFcoreApp.Data;
+using EFcoreApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFcoreApp.Controllers
@@ -13,22 +15,30 @@ namespace EFcoreApp.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
-            return View(await _context.Kurslar.ToListAsync());
+            return View(await _context.Kurslar.Include(k=>k.Ogretmen).ToListAsync());
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Ogretmenler= new SelectList(await _context.Ogretmenler.ToListAsync(),"OgretmenId","AdSoyad");//id ve görünür texti
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Kurs model)
+        public async Task<IActionResult> Create(KursViewModel model)
         {
-            _context.Kurslar.Add(model);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");//sayfa, controller  burada aynı sayfaya aktarılır
+            if (ModelState.IsValid)
+            {
+                _context.Kurslar.Add(new Kurs() { KursId = model.KursId, Baslik = model.Baslik, OgretmenId = model.OgretmenId });
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");//sayfa, controller  burada aynı sayfaya aktarılır
+            }
+
+            ViewBag.Ogretmenler = new SelectList(await _context.Ogretmenler.ToListAsync(), "OgretmenId", "AdSoyad");//id ve görünür texti
+            return View(model);
+            
         }
 
         [HttpGet]
@@ -39,7 +49,23 @@ namespace EFcoreApp.Controllers
                 return NotFound();
             }
 
-            var krs = await _context.Kurslar.FindAsync(id);// sadece id'ye göre arama yapar
+            var krs = await _context
+                                .Kurslar
+                                .Include(k=>k.KursKayitlari)
+                                .ThenInclude(k=>k.Ogrenci)
+                                .Select(k=> new KursViewModel
+                                {
+                                    KursId = k.KursId,
+                                    Baslik = k.Baslik,
+                                    OgretmenId = k.OgretmenId,
+                                    KursKayitlari=k.KursKayitlari
+                                })
+                                .FirstOrDefaultAsync(k=>k.KursId== id);
+            
+            
+            
+            
+            // sadece id'ye göre arama yapar
                                                               //var ogr = await _context.Ogrenciler.FirstOrDefaultAsync(o=>o.Ogrencild==id);//bulduğu ilk herhangi bir kritere göre değeri döndürür.
                                                               // illa id istemez
             if (krs == null)
@@ -47,12 +73,13 @@ namespace EFcoreApp.Controllers
                 return NotFound();
             }
 
+            ViewBag.Ogretmenler = new SelectList(await _context.Ogretmenler.ToListAsync(), "OgretmenId", "AdSoyad");//id ve görünür texti
             return View(krs);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]//güvenlik önlemi sunucu ile istemcinin aynı kişi olmasını sağlıyor.
-        public async Task<IActionResult> Edit(int id, Kurs model)
+        public async Task<IActionResult> Edit(int id, KursViewModel model)
         {
             if (id != model.KursId)
             {
@@ -62,7 +89,7 @@ namespace EFcoreApp.Controllers
             {
                 try
                 {
-                    _context.Update(model);
+                    _context.Update(new Kurs() { KursId=model.KursId, Baslik=model.Baslik, OgretmenId=model.OgretmenId});
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateException)
@@ -78,6 +105,8 @@ namespace EFcoreApp.Controllers
                 }
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Ogretmenler = new SelectList(await _context.Ogretmenler.ToListAsync(), "OgretmenId", "AdSoyad");//id ve görünür texti
             return View(model);//Edit Formu tekrardan kullanıcı karşısına çıkar
         }
 

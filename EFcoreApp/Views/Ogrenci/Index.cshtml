@@ -22,8 +22,8 @@
                 <td>@Html.DisplayFor(modelItem => item.OgrenciAd)</td>
                 <td>@Html.DisplayFor(modelItem => item.OgrenciSoyad)</td>
                 <td>
-                    <a href="" class="btn btn-sm btn-primary" asp-controller="Ogrenci" asp-action="Edit" asp-route="item.Ogrencild">Edit</a>
-                    <a href="" class="btn btn-sm btn-danger" asp-controller="Ogrenci" asp-action="Delete" asp-route="item.Ogrencild">Delete</a>
+                    <a class="btn btn-sm btn-primary" asp-controller="Ogrenci" asp-action="Edit" asp-route-id="@item.Ogrencild">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-controller="Ogrenci" asp-action="Delete" asp-route-id="@item.Ogrencild">Delete</a>
                 </td>
 
             </tr>

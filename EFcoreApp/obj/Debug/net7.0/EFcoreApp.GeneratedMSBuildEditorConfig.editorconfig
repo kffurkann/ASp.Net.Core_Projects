@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/projects_.net/EFcoreApp/Views/KursKayit/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc0theWl0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/KursKayit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc0theWl0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/projects_.net/EFcoreApp/Views/Kurs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,6 +64,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/projects_.net/EFcoreApp/Views/Ogrenci/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Ogretmen/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRtZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Ogretmen/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRtZW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Ogretmen/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRtZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/projects_.net/EFcoreApp/Views/Ogretmen/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRtZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/projects_.net/EFcoreApp/Views/Shared/Error.cshtml]

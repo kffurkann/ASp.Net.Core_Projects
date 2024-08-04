@@ -26,7 +26,12 @@ namespace EFcoreApp.Migrations
                     b.Property<string>("Baslik")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("OgretmenId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("KursId");
+
+                    b.HasIndex("OgretmenId");
 
                     b.ToTable("Kurslar");
                 });
@@ -47,6 +52,10 @@ namespace EFcoreApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("KayitId");
+
+                    b.HasIndex("KursId");
+
+                    b.HasIndex("Ogrencild");
 
                     b.ToTable("KursKayitlari");
                 });
@@ -72,6 +81,77 @@ namespace EFcoreApp.Migrations
                     b.HasKey("Ogrencild");
 
                     b.ToTable("Ogrenciler");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.Ogretmen", b =>
+                {
+                    b.Property<int>("OgretmenId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Ad")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("BaslamaTarihi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Eposta")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Soyad")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefon")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("OgretmenId");
+
+                    b.ToTable("Ogretmenler");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.Kurs", b =>
+                {
+                    b.HasOne("EFcoreApp.Data.Ogretmen", "Ogretmen")
+                        .WithMany("Kurslar")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Ogretmen");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.KursKayit", b =>
+                {
+                    b.HasOne("EFcoreApp.Data.Kurs", "Kurs")
+                        .WithMany("KursKayitlari")
+                        .HasForeignKey("KursId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EFcoreApp.Data.Ogrenci", "Ogrenci")
+                        .WithMany("KursKayitlari")
+                        .HasForeignKey("Ogrencild")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Kurs");
+
+                    b.Navigation("Ogrenci");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.Kurs", b =>
+                {
+                    b.Navigation("KursKayitlari");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.Ogrenci", b =>
+                {
+                    b.Navigation("KursKayitlari");
+                });
+
+            modelBuilder.Entity("EFcoreApp.Data.Ogretmen", b =>
+                {
+                    b.Navigation("Kurslar");
                 });
 #pragma warning restore 612, 618
         }
