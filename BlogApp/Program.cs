@@ -1,3 +1,4 @@
+using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -10,10 +11,15 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BlogContext>(options => {
     var config=builder.Configuration;
     var connectionString = config.GetConnectionString("sql_connection");
-    options.UseSqlite(connectionString);
+    options.UseSqlServer(connectionString);//mssql mysqle çevirebilirsin
 });
 
+builder.Services.AddScoped<IPostRepository, EfPostRepository>();
+
 var app = builder.Build();
+
+SeedData.TestVerileriniDoldur(app); //migration oluþturduktan sonra datbase update yapmana gerek yok,
+                                    //SeedData.TestVerileriniDoldur(app); çalýþtýrýyor
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
