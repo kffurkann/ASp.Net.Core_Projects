@@ -8,6 +8,7 @@ namespace BlogApp.Data.Abstract
         void CreatePost(Post post);
     }
     /*
+     * numarable 100 bilgiyi getirri sonra filtereleme yapar querable sadece filtrelenmiş olanılaı getirir
      *  IQueryable<Post> Posts Özelliği:
         Posts özelliği, Post nesnelerinin sorgulanabilir bir koleksiyonunu sağlar. 
         Bu özellik, Post nesnelerini sorgulamak için kullanılır.

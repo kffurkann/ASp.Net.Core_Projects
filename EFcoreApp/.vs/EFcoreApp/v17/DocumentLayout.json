@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "E:\\projects_.net\\EFcoreApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\kurskayit\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\kurskayit\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\kurskayit\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\kurskayit\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\kurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\kurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\data\\ogrenci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:data\\ogrenci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\kurs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,20 +19,8 @@
       "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\ogretmen\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\views\\kurs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:views\\kurs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\controllers\\kurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:controllers\\kurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\models\\kursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:models\\kursviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|e:\\projects_.net\\efcoreapp\\data\\ogretmen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44E5A096-CC63-4AA2-AF6A-544615FD30B3}|EFcoreApp.csproj|solutionrelative:data\\ogretmen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,84 +46,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ogrenci.cs",
+              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Data\\Ogrenci.cs",
+              "RelativeDocumentMoniker": "Data\\Ogrenci.cs",
+              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Data\\Ogrenci.cs",
+              "RelativeToolTip": "Data\\Ogrenci.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T19:54:10.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\KursKayit\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\KursKayit\\Index.cshtml",
-              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\KursKayit\\Index.cshtml",
-              "RelativeToolTip": "Views\\KursKayit\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-04T22:33:02.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Kurs\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Kurs\\Edit.cshtml",
-              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Kurs\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Kurs\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-04T10:56:30.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Kurs\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Kurs\\Index.cshtml",
               "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\Kurs\\Index.cshtml",
               "RelativeToolTip": "Views\\Kurs\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-04T10:55:05.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Ogretmen.cs",
-              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Data\\Ogretmen.cs",
-              "RelativeDocumentMoniker": "Data\\Ogretmen.cs",
-              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Data\\Ogretmen.cs",
-              "RelativeToolTip": "Data\\Ogretmen.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwA0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T10:52:37.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KursController.cs",
-              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Controllers\\KursController.cs",
-              "RelativeDocumentMoniker": "Controllers\\KursController.cs",
-              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Controllers\\KursController.cs",
-              "RelativeToolTip": "Controllers\\KursController.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAmwGkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T10:49:48.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\KursKayit\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\KursKayit\\Create.cshtml",
-              "ToolTip": "E:\\projects_.net\\EFcoreApp\\Views\\KursKayit\\Create.cshtml",
-              "RelativeToolTip": "Views\\KursKayit\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-04T10:49:10.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Kurs\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Kurs\\Create.cshtml",
@@ -147,12 +80,11 @@
               "RelativeToolTip": "Views\\Kurs\\Create.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-04T10:46:48.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-04T10:46:48.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Views\\Ogretmen\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Ogretmen\\Index.cshtml",
@@ -160,12 +92,11 @@
               "RelativeToolTip": "Views\\Ogretmen\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-04T10:33:29.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-04T10:33:29.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "KursViewModel.cs",
               "DocumentMoniker": "E:\\projects_.net\\EFcoreApp\\Models\\KursViewModel.cs",
               "RelativeDocumentMoniker": "Models\\KursViewModel.cs",
@@ -173,8 +104,7 @@
               "RelativeToolTip": "Models\\KursViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T10:59:54.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-04T10:59:54.511Z"
             }
           ]
         }

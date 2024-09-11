@@ -1,10 +1,10 @@
-﻿@model List<Post>
-
-<div class="row">
+﻿<!--model List<Post>-->
+@model PostsViewModel //component yapınca tag'in bir anlamı kalmadı
+<div class="row"> 
     <div class="col-lg-8">
-        <div class="bg-qhite p-4">            
+        <div class="bg-white p-4">            
             <h1 class="h4 mb-4">Popular Posts</h1>
-            @foreach(var post in Model)
+            @foreach(var post in Model.Posts)//iki ayrı entityi beraber kullanmak için //Model idi
             {
                 <div class="card bg-transparent border-0 mb-3">
                     <div class="row">
@@ -12,7 +12,7 @@
                             <img src="~/img/@post.Image" class="img-fluid rounded" alt="">
                         </div>
                         <div class="col-8">
-                            <h5><a href="" class="btn-link fw-bold">@post.Title</a></h5>
+                            <h5><a href="/posts/@post.Url" class="btn-link fw-bold">@post.Title</a></h5>
                             <p>@post.Content</p>
                             <a href="" class="badge bg-danger bg-opacity-10 text-danger mb-2 fw-bold">Web Development></a>
                         </div>
@@ -29,6 +29,10 @@
             </nav>
         </div>
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <vc:tags-menu></vc:tags-menu>
+        <vc:tags-menu></vc:tags-menu>
+        <vc:new-posts></vc:new-posts>
+    </div>
 
 </div>
