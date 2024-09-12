@@ -25,6 +25,18 @@
       "PackagePath": "staticwebassets\\img\\3.jpg"
     },
     {
+      "Id": "E:\\projects_.net\\BlogApp\\wwwroot\\img\\avatar.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar.jpg"
+    },
+    {
+      "Id": "E:\\projects_.net\\BlogApp\\wwwroot\\img\\p1.jpg",
+      "PackagePath": "staticwebassets\\img\\p1.jpg"
+    },
+    {
+      "Id": "E:\\projects_.net\\BlogApp\\wwwroot\\img\\p2.jpg",
+      "PackagePath": "staticwebassets\\img\\p2.jpg"
+    },
+    {
       "Id": "E:\\projects_.net\\BlogApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

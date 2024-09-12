@@ -16,6 +16,7 @@ builder.Services.AddDbContext<BlogContext>(options => {
 
 builder.Services.AddScoped<IPostRepository, EfPostRepository>();
 builder.Services.AddScoped<ITagRepository, EfTagRepository>();
+builder.Services.AddScoped<ICommentRepository, EfCommentRepository>();
 
 var app = builder.Build();
                               //app aracýlýðý ile Services containerýna ulaþýr ve içerisindeki context bilgisini alýr
@@ -39,8 +40,14 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "post_details",
-    pattern: "posts/{url}",
+    pattern: "posts/details/{url}",
     defaults:new { controller = "Posts", action = "Details" } 
+    );
+
+app.MapControllerRoute(
+    name: "posts_by_tag",
+    pattern: "posts/tag/{tag}",
+    defaults: new { controller = "Posts", action = "Index" }
     );
 
 app.MapControllerRoute(
