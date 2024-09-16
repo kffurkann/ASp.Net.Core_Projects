@@ -4,6 +4,7 @@ using BlogApp.Entity;
 using BlogApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace BlogApp.Controllers
 {
@@ -38,6 +39,8 @@ namespace BlogApp.Controllers
         {
             //return View(_postRepository.Posts.ToList()); //interfacedeki iquerayble.Efpostadi iquereable
 
+            var claims = User.Claims;
+
             var posts = _postRepository.Posts;//toList dersem veritabanından alırım oyüzden filtrelemeye devam
 
             if (!string.IsNullOrEmpty(tag))
@@ -58,23 +61,28 @@ namespace BlogApp.Controllers
         }
 
         [HttpPost]
-        public JsonResult AddComment(int PostId, string UserName, string Text)
+        public JsonResult AddComment(int PostId, string Text)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var username = User.FindFirstValue(ClaimTypes.Name);
+            var avatar = User.FindFirstValue(ClaimTypes.UserData);
+
             var entity = new Comment
             {
+                PostId = PostId,
                 Text = Text,
                 PublishedOn = DateTime.Now,
-                PostId = PostId,
-                User = new User { UserName = UserName, Image = "avatar.jpg" }
+                UserId = int.Parse(userId ?? "")// nullsa boş string gönderebilir
+                //User = new User { UserName = UserName, Image = "avatar.jpg" } username bilgisini elle kendimiz giriyorduk.
             };
             _commentRepository.CreateComment(entity);
 
             return Json(new
             {
-                UserName,
+                username,
                 Text,
                 entity.PublishedOn,
-                entity.User.Image
+                avatar // entity.User.Image
             });
 
         }

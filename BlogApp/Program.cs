@@ -1,5 +1,6 @@
 using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -17,6 +18,9 @@ builder.Services.AddDbContext<BlogContext>(options => {
 builder.Services.AddScoped<IPostRepository, EfPostRepository>();
 builder.Services.AddScoped<ITagRepository, EfTagRepository>();
 builder.Services.AddScoped<ICommentRepository, EfCommentRepository>();
+builder.Services.AddScoped<IUserRepository, EfUserRepository>();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 var app = builder.Build();
                               //app aracýlýðý ile Services containerýna ulaþýr ve içerisindeki context bilgisini alýr
@@ -35,7 +39,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
@@ -52,6 +56,6 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Posts}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
