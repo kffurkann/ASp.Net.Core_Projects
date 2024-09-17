@@ -12,7 +12,12 @@
                 }
             </div>
             <img src="~/img/@Model.Image" class="img-fluid rounded" alt="">
-            <div>@Model.Content</div>
+            <ul class="list-inline my-3 ">
+                <li class="list-inline-item"><i class="bi bi-calendar"></i> @Model.PublishedOn.ToString("d")</li>
+                <li class="list-inline-item"><i class="bi bi-person-circle"></i> <a href="/profile/@Model.User.UserName">@Model.User.Name</a> </li>
+            </ul>
+            <hr class="py-3">
+            <div>@Html.Raw(@Model.Content)</div>
         </div>
         <div class="bg-white mt-3">
             <div class="card border-0">
@@ -21,13 +26,15 @@
                 </div>
                 <div class="card-body">
                     <div id="comments">
-                        @foreach (var comment in Model.Comments)
+                        @foreach(var comment in Model.Comments)
                         {
                             <div class="my-4 d-flex">
                                 <img src="/img/@comment.User.Image" alt="" class="avatar rounded-circle float-start me-3">
                                 <div>
                                     <div class="mb-2 d-flex">
-                                        <h6 class="me-2">@comment.User.UserName</h6>
+                                        <h6 class="me-2">
+                                            <a href="/profile/@comment.User.UserName">@comment.User.Name</a>
+                                        </h6>
                                         <small>@comment.PublishedOn.ToString("G")</small>
                                     </div>
                                     <p>@comment.Text</p>
@@ -92,7 +99,9 @@
                                 <img src="/img/${yorum.avatar}" alt="" class="avatar rounded-circle float-start me-3">
                                 <div>
                                     <div class="mb-2 d-flex">
-                                        <h6 class="me-2">${yorum.username}</h6>
+                                        <h6 class="me-2">
+                                            <a href="/profile/${yorum.username}">${yorum.username}</a>
+                                        </h6>
                                         <small>${date.toLocaleDateString()}</small>
                                     </div>
                                     <p>${yorum.text}</p>

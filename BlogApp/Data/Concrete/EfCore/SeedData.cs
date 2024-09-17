@@ -41,6 +41,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         new Post
                         {
                             Title = "Asp.net core",
+                            Description = "Asp.net core dersleri",
                             Content = "Asp.net core dersleri",
                             Url ="aspnet-core",
                             IsActive = true,
@@ -56,6 +57,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         new Post
                         {
                             Title = "PHP",
+                            Description = "Php core dersleri",
                             Content = "PHP dersleri",
                             Url = "php",
                             IsActive = true,
@@ -67,6 +69,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         new Post
                         {
                             Title = "DJANGO",
+                            Description = "Django dersleri",
                             Content = "DJANGO dersleri",
                             Url = "django",
                             IsActive = true,

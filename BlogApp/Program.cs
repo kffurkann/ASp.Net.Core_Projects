@@ -20,7 +20,9 @@ builder.Services.AddScoped<ITagRepository, EfTagRepository>();
 builder.Services.AddScoped<ICommentRepository, EfCommentRepository>();
 builder.Services.AddScoped<IUserRepository, EfUserRepository>();
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
+    options.LoginPath = "/Users/Login";// get create için yönlendirme
+});
 
 var app = builder.Build();
                               //app aracýlýðý ile Services containerýna ulaþýr ve içerisindeki context bilgisini alýr
@@ -53,6 +55,12 @@ app.MapControllerRoute(
     pattern: "posts/tag/{tag}",
     defaults: new { controller = "Posts", action = "Index" }
     );
+
+app.MapControllerRoute(
+    name: "user_profile",
+    pattern: "profile/{username}",
+    defaults: new { controller = "Users", action = "Profile" }
+);
 
 app.MapControllerRoute(
     name: "default",

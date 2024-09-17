@@ -6,6 +6,8 @@ namespace BlogApp.Data.Abstract
     {
         IQueryable<Post> Posts { get; }
         void CreatePost(Post post);
+        void EditPost(Post post);
+        void EditPost(Post post, int[] tagIds);
     }
     /*
      * numarable 100 bilgiyi getirri sonra filtereleme yapar querable sadece filtrelenmiş olanılaı getirir
