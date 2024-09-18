@@ -149,7 +149,7 @@ namespace BlogApp.Controllers
                 return NotFound();
             }
 
-            ViewBag.Tags = _tagRepository.Tags.ToList();
+            ViewBag.Tags = _tagRepository.Tags.ToList();// veritabanına atanmış tüm etiketler
 
             return View(new PostCreateViewModel
             {

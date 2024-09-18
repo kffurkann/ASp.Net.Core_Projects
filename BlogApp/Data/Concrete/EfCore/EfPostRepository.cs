@@ -48,7 +48,7 @@ namespace BlogApp.Data.Concrete.EfCore
                 entity.Url = post.Url;
                 entity.IsActive = post.IsActive;
 
-                entity.Tags = _context.Tags.Where(tag => tagIds.Contains(tag.TagId)).ToList();
+                entity.Tags = _context.Tags.Where(tag => tagIds.Contains(tag.TagId)).ToList();//Bu ifade, tagIds dizisinde tag.TagId değerinin olup olmadığını kontrol eder.
 
                 _context.SaveChanges();
             }

@@ -42,7 +42,8 @@
         <div class="col-3">
             <div class="bg-white p-4">
 
-                @foreach (var tag in ViewBag.Tags)
+                @foreach (var tag in ViewBag.Tags)// veritabanına atanmış tüm etiketler
+                                                    /* Model.Tags ilgili posta ait etiketler */
                 {
                     <div class="form-check">
                         <input class="form-check-input"
@@ -51,6 +52,7 @@
                                value="@tag.TagId"
                                id="tag_@tag.TagId"
                         @(Model.Tags.Any(i => i.TagId == tag.TagId) ? "checked" : "")>
+                        
                         <label class="form-check-label" for="tag_@tag.TagId">
                             @tag.Text
                         </label>
