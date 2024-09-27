@@ -4,13 +4,22 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(i =>
+    new SmtpEmailSender(
+        builder.Configuration["EmailSender:Host"],
+        builder.Configuration.GetValue<int>("EmailSender:Port"),
+        builder.Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+        builder.Configuration["EmailSender:Username"],
+        builder.Configuration["EmailSender:Password"])
+);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<IdentityContext>(
     options => options.UseSqlite(builder.Configuration["ConnectionStrings:SQLite_Connection"]));
 
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
 
 builder.Services.Configure<IdentityOptions>(options => {
     options.Password.RequiredLength = 6;
@@ -20,7 +29,19 @@ builder.Services.Configure<IdentityOptions>(options => {
     options.Password.RequireDigit = false;
 
     options.User.RequireUniqueEmail = true;
-    //options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
+    // options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz";
+
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;//4.59 olduðu için 4 gösterir
+
+    options.SignIn.RequireConfirmedEmail = true;//email onay
+});
+
+builder.Services.ConfigureApplicationCookie(options => {
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";//yetkisiz alana gidildiðinde buraya yönlenir
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(30);
 });
 
 var app = builder.Build();
@@ -37,7 +58,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
