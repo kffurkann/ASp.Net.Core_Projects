@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using ProductsAPI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ProductsContext>(x => x.UseSqlite("Data Source=products.db"));
 
 // Add services to the container.
 
