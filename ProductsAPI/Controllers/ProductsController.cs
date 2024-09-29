@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductsAPI.Models;
+using ProductsAPI.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProductsAPI.Controllers
 {
@@ -20,11 +22,12 @@ namespace ProductsAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _context.Products.Where(i => i.IsActive).Select(p => DTOConverter.ProductToDTO(p)).ToListAsync();
             return Ok(products);
         }
 
         // localhost:5000/api/products/5 => GET
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(int? id)
         {
@@ -33,7 +36,7 @@ namespace ProductsAPI.Controllers
                 return NotFound();
             }
 
-            var p = await _context.Products.FirstOrDefaultAsync(i => i.ProductId == id);
+            var p = await _context.Products.Select(p => DTOConverter.ProductToDTO(p)).FirstOrDefaultAsync(i => i.ProductId == id);
 
             if (p == null)
             {
@@ -49,7 +52,8 @@ namespace ProductsAPI.Controllers
             _context.Products.Add(entity);
             await _context.SaveChangesAsync();//denerken id'yi sil
 
-            return CreatedAtAction(nameof(GetProduct), new { id = entity.ProductId }, entity);
+            return CreatedAtAction(nameof(GetProduct), new { id = entity.ProductId }, entity);//HTTP 201
+            //return Ok(entity); // HTTP 200 durum kodu ile ürünün kendisini döndürür
         }
 
         // localhost:5000/api/products/5 => PUT
@@ -111,5 +115,7 @@ namespace ProductsAPI.Controllers
             }
             return NoContent();//İstenen işlemin başarılı olduğunu ancak veri döndürmenin gerekli olmadığı durumlarda kullanılır. put ve delete
         }
+
+        
     }
 }

@@ -126,3 +126,4 @@ E:\projects_.net\ProductsAPI\obj\Debug\net8.0\refint\ProductsAPI.dll
 E:\projects_.net\ProductsAPI\obj\Debug\net8.0\ProductsAPI.pdb
 E:\projects_.net\ProductsAPI\obj\Debug\net8.0\ProductsAPI.genruntimeconfig.cache
 E:\projects_.net\ProductsAPI\obj\Debug\net8.0\ref\ProductsAPI.dll
+E:\projects_.net\ProductsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
