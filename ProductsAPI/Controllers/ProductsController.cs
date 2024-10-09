@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ProductsAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly ProductsContext _context;
@@ -36,7 +36,7 @@ namespace ProductsAPI.Controllers
                 return NotFound();
             }
 
-            var p = await _context.Products.Select(p => DTOConverter.ProductToDTO(p)).FirstOrDefaultAsync(i => i.ProductId == id);
+            var p = await _context.Products.Where(i => i.ProductId == id).Select(p => DTOConverter.ProductToDTO(p)).FirstOrDefaultAsync();
 
             if (p == null)
             {

@@ -6,7 +6,18 @@ using Microsoft.OpenApi.Models;
 using ProductsAPI.Models;
 using System.Text;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";//javascript
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options => {//javascript
+    options.AddPolicy(MyAllowSpecificOrigins,
+    policy => {
+        policy.WithOrigins("http://127.0.0.1:5500")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});//javascript
 
 builder.Services.AddDbContext<ProductsContext>(x => x.UseSqlite("Data Source=products.db"));
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ProductsContext>();
@@ -32,8 +43,8 @@ builder.Services.AddAuthentication(x => {
     x.RequireHttpsMetadata = false;
     x.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = false,
-        ValidIssuer = "sadikturan.com",
+        ValidateIssuer = false,//true dersen alttaki bilgi ile generateJWT deki issuer ayný olmalý
+        ValidIssuer = "furkan.com",
         ValidateAudience = false,
         ValidAudience = "",
         ValidAudiences = new string[] { "a", "b" },
@@ -76,6 +87,7 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -87,6 +99,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
+app.UseRouting();
+app.UseCors(MyAllowSpecificOrigins);//javascript
 app.UseAuthorization();
 
 app.MapControllers();

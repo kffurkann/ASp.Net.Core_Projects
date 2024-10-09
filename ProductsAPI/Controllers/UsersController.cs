@@ -10,8 +10,8 @@ using System.Text;
 
 namespace ProductsAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;//create and login
@@ -51,6 +51,7 @@ namespace ProductsAPI.Controllers
             BadRequest(result.Errors);
         }
 
+        [HttpPost("login")]
         public async Task<IActionResult> Login(UserDTOLogin model)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
@@ -84,7 +85,8 @@ namespace ProductsAPI.Controllers
                     }
                 ),
                 Expires = DateTime.UtcNow.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Issuer = "furkan.com"
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
