@@ -1,32 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
+using StoreApp.Data.Abstract;
 using StoreApp.Web.Models;
-using System.Diagnostics;
 
 namespace StoreApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private IStoreRepository _storeRepository;
+        public HomeController(IStoreRepository storeRepository)
         {
-            _logger = logger;
+            _storeRepository = storeRepository;
         }
-
         public IActionResult Index()
         {
-            return View();
-        }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            var products = _storeRepository.Products.Select(p => new ProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Price = p.Price
+            }).ToList();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ProductListViewModel //(products) yerine bu gönderilir listview olduðu için
+            {
+                Products = products
+            });
+
         }
     }
 }
