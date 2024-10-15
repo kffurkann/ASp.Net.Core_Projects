@@ -128,3 +128,5 @@ E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\refint\StoreApp.Web.dll
 E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\StoreApp.Web.pdb
 E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\StoreApp.Web.genruntimeconfig.cache
 E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\ref\StoreApp.Web.dll
+E:\projects_.net\StoreApp\StoreApp.Web\bin\Debug\net8.0\AutoMapper.dll
+E:\projects_.net\StoreApp\StoreApp.Web\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

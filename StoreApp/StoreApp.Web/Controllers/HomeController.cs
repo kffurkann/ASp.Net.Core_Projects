@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using StoreApp.Data.Abstract;
 using StoreApp.Web.Models;
@@ -6,27 +7,54 @@ namespace StoreApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IStoreRepository _storeRepository;
-        public HomeController(IStoreRepository storeRepository)
+        public int pageSize = 3;
+        private readonly IStoreRepository _storeRepository;
+        private readonly IMapper _mapper;
+        public HomeController(IStoreRepository storeRepository, IMapper mapper)
         {
             _storeRepository = storeRepository;
+            _mapper = mapper;
         }
-        public IActionResult Index()
+
+        // localhost:5000/?page=2
+        public IActionResult Index(string category, int page = 1)
         {
-
-            var products = _storeRepository.Products.Select(p => new ProductViewModel
+            return View(new ProductListViewModel
             {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                Price = p.Price
-            }).ToList();
-
-            return View(new ProductListViewModel //(products) yerine bu gönderilir listview olduðu için
-            {
-                Products = products
+                Products = _storeRepository.GetProductsByCategory(category, page, pageSize)
+                    .Select(product => _mapper.Map<ProductViewModel>(product)),
+                PageInfo = new PageInfo
+                {
+                    ItemsPerPage = pageSize,
+                    CurrentPage = page,
+                    TotalItems = _storeRepository.GetProductCount(category)
+                }
             });
 
         }
+
+
+        /*    localhost:5000/?page=2
+        public IActionResult Index(string category, int page = 1)
+        {
+            return View(new ProductListViewModel
+            {
+                Products = _storeRepository.GetProductsByCategory(category, page, pageSize).Select(p =>
+                            new ProductViewModel
+                            {
+                                Id = p.Id,
+                                Name = p.Name,
+                                Description = p.Description,
+                                Price = p.Price
+                            }),
+                PageInfo = new PageInfo
+                {
+                    ItemsPerPage = pageSize,
+                    CurrentPage = page,
+                    TotalItems = _storeRepository.GetProductCount(category)
+                }
+            });
+
+        }*/
     }
 }
