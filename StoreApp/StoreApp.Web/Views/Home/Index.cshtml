@@ -19,9 +19,13 @@
                             <p>@p.Description</p>
                         </div>
                         <div>
-                            <span class="badge rounded-pill text-bg-success">@p.Price TL</span>
+                            <span class="badge rounded-pill bg-success text-white">@p.Price TL</span>
                         </div>
                     </div>
+                    <form asp-page="/Cart" method="post">
+                        <input type="hidden" asp-for="@p.Id" name="Id">
+                        <button type="submit" class="btn btn-outline-success btn-sm pull-right" style="float:right;">Sepete Ekle</button>
+                    </form>
                 </div>
         }
 
@@ -30,8 +34,8 @@
                 <div page-model="@Model.PageInfo"
                      page-action="Index"
                      page-class="btn"
-                     page-class-link="btn-outline-secondary"
-                     page-class-active="btn-secondary"
+                     page-class-link="btn-outline-dark"
+                     page-class-active="btn-dark"
                      class="btn-group my-2"></div>
         }
         </div>

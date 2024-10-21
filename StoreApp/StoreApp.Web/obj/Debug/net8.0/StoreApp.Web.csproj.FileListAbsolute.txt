@@ -130,3 +130,4 @@ E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\StoreApp.Web.genruntimec
 E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\ref\StoreApp.Web.dll
 E:\projects_.net\StoreApp\StoreApp.Web\bin\Debug\net8.0\AutoMapper.dll
 E:\projects_.net\StoreApp\StoreApp.Web\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\projects_.net\StoreApp\StoreApp.Web\obj\Debug\net8.0\scopedcss\Pages\Shared\_CardLayout.cshtml.rz.scp.css

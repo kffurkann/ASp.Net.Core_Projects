@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 
@@ -16,6 +17,11 @@ builder.Services.AddDbContext<StoreDbContext>(options => {
 });
 
 builder.Services.AddScoped<IStoreRepository, EfStoreRepository>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<Cart>(sc => SessionCart.GetCart(sc));//Cart.cshtml.cs'de inject edilir.
 
 var app = builder.Build();
 
@@ -29,6 +35,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 
@@ -44,4 +51,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapRazorPages();
 app.Run();
