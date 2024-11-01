@@ -19,6 +19,7 @@ namespace StoreApp.Data.Concrete
         //DbSet, tablolarla çalışmanızı sağlayan EF Core'un sağladığı bir sınıftır.
 
         public DbSet<Category> Categories => Set<Category>();
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
