@@ -23,6 +23,7 @@ namespace StoreApp.Web.Controllers
             {
                 Products = _storeRepository.GetProductsByCategory(category, page, pageSize)
                     .Select(product => _mapper.Map<ProductViewModel>(product)),
+                //Select(p => _mapper.Map<ProductViewModel>(p)), olabilir çünü product sýnýfýnýn bir nesnesi p
                 PageInfo = new PageInfo
                 {
                     ItemsPerPage = pageSize,
